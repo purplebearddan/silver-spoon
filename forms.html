@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
     <style>
-        form {
+        form, fieldset {
             display: flex;
             flex-direction: column;
         }
@@ -16,25 +16,105 @@
 
 <body>
     <h1>Forms</h1>
-
-    <!-- https://www.google.com/search?q=chickens -->
+    <!-- https://www.google.com/search?q=chickens
+                        default method="get" -->
+    <!-- <section>
 
     <h2>Simple Form Example</h2>
-    <!-- default method="get" -->
     <form action="https://www.google.com/search">
 
         <label for="q">Search Query</label>
         <input type="text" name="q" id="q" placeholder="Search Query">
-
+        
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Email" required>
-
+        
         <label for="password">Password</label>
         <input type="password" name="pass" id="pass" placeholder="Password" minlength="8" required>
-
+        
         <button type="submit">Google Search</button>
     </form>
+</section> -->
+<section>
+    <h2>Complex Form</h2>
+    <form>
 
+        <legend>Personal</legend>
+        <fieldset>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" required>
+        </fieldset>
+
+        <legend>Security</legend>
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+
+            <label for="passConfirm">Confirm Password</label>
+            <input type="password" name="passConfirm" id="passConfirm" required>
+
+            <label for="eulaCheckbox">
+                <input type="checkbox" name="eulaCheckbox" id="eulaCheckbox" required>
+                I agree to the <a href="#">EULA</a>
+            </label>
+        </fieldset>
+
+        <legend>Comments</legend>
+        <fieldset>
+            <label for="comments">Do you have any feedback?</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <legend>Cusomisation</legend>
+        <fieldset>
+            <label for="color">Whats your fave colour?</label>
+            <input type="color" name="color" id="color">
+
+            <label for="iceCream">What is your fave ice cream flavour?</label>
+            <select name="iceCream" id="iceCream">
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+            </select>
+            <p>Are you sure you'd like to sign up?</p>
+
+            <label for="consentYes">
+                <input type="radio" name="consent" id="consentYes" value="yes">
+                Yes
+            </label>
+
+            <label for="consentNo">
+                <input type="radio" name="consent" id="consentNo" value="no">
+                No
+            </label>
+        </fieldset>
+        
+        <button type="reset">Reset Form</button>
+        <button type="submit">Submit Form</button>
+        
+        </form>
+        </section>
 </body>
 
 </html>
+<!-- http://127.0.0.1:5500/forms.html
+?firstName=Dan
+&lastName=Monaghan
+&dob=1990-10-27
+&email=daniel_m%40putplebeard.co.uk
+&pass=SomeStrongPassword
+&passConfirm=SomeStrongPassword
+&eulaCheckbox=on
+&comments=None
+&color=%23ff0066
+&iceCream=vanilla
+&consent=yes -->
