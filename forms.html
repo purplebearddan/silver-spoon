@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Forms</h1>
+
+    <!-- https://www.google.com/search?q=chickens -->
+
+    <h2>Simple Form Example</h2>
+    <!-- default method="get" -->
+    <form action="https://www.google.com/search">
+
+        <label for="q">Search Query</label>
+        <input type="text" name="q" id="q" placeholder="Search Query">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="pass" id="pass" placeholder="Password" minlength="8" required>
+
+        <button type="submit">Google Search</button>
+    </form>
+
+</body>
+
+</html>
